@@ -7,3 +7,8 @@ repositories {
 dependencies {
 	compile "com.sparkjava:spark-core:2.5.2"
 }
+
+task run(type: JavaExec, dependsOn: classes) {
+    main = "org.usd232.hackathon.twentysixteen.Main"
+    classpath = sourceSets.main.runtimeClasspath
+}
