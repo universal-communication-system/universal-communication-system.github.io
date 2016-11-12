@@ -18,3 +18,6 @@ gradle-app.setting
 .project
 .settings/
 bin/
+_site
+.sass-cache
+.jekyll-metadata
