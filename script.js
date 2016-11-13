@@ -18,14 +18,14 @@ function sendTelnetReq() {
             "k": k
         },
         "transformResponse": function(data) {
-            return $.parseXML(data.replace("&nbsp;", " "));
+            return $.parseXML(data);
         }
     }).error(sendTelnetReq).success(function(data) {
         if ( kInitial == k ) {
             k = "";
         }
         if ( data.documentElement.tagName.toLowerCase() == "pre" ) {
-            document.getElementById("message-container").innerHTML = data.documentElement.textContent;
+            document.getElementById("message-container").innerHTML = data.documentElement.textContent.replace(/\s+/g, " ");
         }
         setTimeout(sendTelnetReq, 50);
     });
