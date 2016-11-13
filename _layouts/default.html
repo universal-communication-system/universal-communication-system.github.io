@@ -4,6 +4,11 @@
         {% include header.html %}
     </head>
     <body>
-
+        <div class="container" ng-app="app" ng-controller="controller">
+            {{ content }}
+        </div>
+        <script>
+            init();
+        </script>
     </body>
 </html>

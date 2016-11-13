@@ -1,3 +1,31 @@
 ---
 layout: default
 ---
+<div class="row messages">
+    <div class="col s12" id="message-container">
+    </div>
+</div>
+<div class="row controls invisible">
+    <div class="col s2 input-field">
+        <input type="text" placeholder="Your name" />
+    </div>
+    <div class="col s8 input-field">
+        <input type="text" placeholder="Message" />
+    </div>
+    <div class="col s2">
+        <input type="submit" class="btn" value="Send Message" />
+    </div>
+</div>
+<div class="row controls">
+    <div class="col s2 input-field">
+        <input type="text" id="name" placeholder="Your name" ng-model="name" />
+    </div>
+    <form action="#" onsubmit="return send()">
+        <div class="col s8 input-field">
+            <input type="text" id="message" placeholder="Message" ng-model="message" />
+        </div>
+        <div class="col s2">
+            <input type="submit" class="btn" value="Send Message" ng-disabled="message == null || name == null || message == '' || name == ''" />
+        </div>
+    </form>
+</div>
