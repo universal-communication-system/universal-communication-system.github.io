@@ -18,7 +18,7 @@ function sendTelnetReq() {
             "k": k
         },
         "transformResponse": function(data) {
-            return $.parseXML(data);
+            return $.parseXML(data.replace("&nbsp;", " "));
         }
     }).error(sendTelnetReq).success(function(data) {
         if ( kInitial == k ) {
