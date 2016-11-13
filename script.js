@@ -27,7 +27,7 @@ function sendTelnetReq() {
         if ( data.documentElement.tagName.toLowerCase() == "pre" ) {
             document.getElementById("message-container").innerHTML = data.documentElement.textContent.replace(/\s+/g, " ");
         }
-        setTimeout(sendTelnetReq, 50);
+        setTimeout(sendTelnetReq, 250);
     });
 }
 
